@@ -5,6 +5,7 @@ const cityValue = document.querySelector(".city");
 const tempValue = document.querySelector(".temp");
 const desc = document.querySelector(".desc");
 const locOverview = document.querySelector("#location-overview");
+const btn = document.querySelector(".get-local");
 
 const weather = {}
 
@@ -15,29 +16,25 @@ weather.temperature ={
 const Kelvin = 273;
 const Key = "9378b429dd8cb9244dbbde76f435a174";
 
-if('geolocation' in navigator)
-{
-    navigator.geolocation.getCurrentPosition(setPosition)
-}else{
-    alert("Ooops! Browser doesnot support Geolocation ");
-}
+// if('geolocation' in navigator)
+// {
+//     navigator.geolocation.getCurrentPosition(setPosition)
+// }else{
+//     alert("Ooops! Browser doesnot support Geolocation ");
+// }
 
-function setPosition(position)
-{
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    getWeather(latitude, longitude);
-}
+// function setPosition(position)
+// {
+//     let latitude = position.coords.latitude;
+//     let longitude = position.coords.longitude;
+//     getWeather(latitude, longitude);
+// }
 
 // btn.addEventListener("click", displayWeather );
+// let api = `https://api.openweathermap.org/data/2.5/weather?q=Lagos,Nigeria&appid=${Key}`;
 
-function getWeather(latitude, longitude)
-{
-    let api = `https://api.openweathermap.org/data/2.5/weather?q=Lagos,Nigeria&appid=${Key}`;
-
-    
-
-    fetch(api)
+    btn.addEventListener('click', function(){
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Lagos,Nigeria&appid=9378b429dd8cb9244dbbde76f435a174')
     .then(function (response){
         let data = response.json();
         return data;
@@ -52,14 +49,15 @@ function getWeather(latitude, longitude)
         displayWeather()
     })
 
-}
-
 function displayWeather()
 {
     cityValue.innerHTML = `${weather.city}, ${weather.country}`;
     tempValue.innerHTML =`${weather.temperature.value}<span>C</span>`;
     desc.innerHTML = weather.description;
 }
+    })
+
+    
 
 
 
