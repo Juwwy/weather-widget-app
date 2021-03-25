@@ -1,5 +1,6 @@
 //Selecting target element
 
+
 const weathericon = document.querySelector(".weather-icon");
 const cityValue = document.querySelector(".city");
 const tempValue = document.querySelector(".temp");
@@ -34,8 +35,8 @@ const Key = "9378b429dd8cb9244dbbde76f435a174";
 
 function displayWeather()
 {
-    cityValue.innerHTML = `${weather.city}, ${weather.country}`;
-    tempValue.innerHTML =`${weather.temperature.value}<span>C</span>`;
+    cityValue.innerHTML = ` ${weather.city}, ${weather.country}`;
+    tempValue.innerHTML =`${weather.temperature.value}°<span>C</span>`;
     desc.innerHTML = weather.description;
 }
     })
