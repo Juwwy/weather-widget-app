@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0 auto;
+    padding-top: 20px;
+    width:600px;
+    /* height: 800px; */
+    background-color:  whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card {
+    height: 500px;
+}
+
+.displayCheck{
+    display: none;
+}
+
+#location-overview{
+    padding-top: 15px;
+}
+
+
+.modify{
+    background-color: palevioletred;
+    color: black;
+    font-family: "nunito";
+    height : 150px;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    font-size: 20px;
+    position: absolute;
+    left: 140px;
+    border-radius: 5px;
+    box-shadow: 5px 4px 5px 0;
+}
+
+.modify:hover{
+    transform: scale(0.8)
+}
