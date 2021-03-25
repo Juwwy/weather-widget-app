@@ -16,23 +16,6 @@ weather.temperature ={
 const Kelvin = 273;
 const Key = "9378b429dd8cb9244dbbde76f435a174";
 
-// if('geolocation' in navigator)
-// {
-//     navigator.geolocation.getCurrentPosition(setPosition)
-// }else{
-//     alert("Ooops! Browser doesnot support Geolocation ");
-// }
-
-// function setPosition(position)
-// {
-//     let latitude = position.coords.latitude;
-//     let longitude = position.coords.longitude;
-//     getWeather(latitude, longitude);
-// }
-
-// btn.addEventListener("click", displayWeather );
-// let api = `https://api.openweathermap.org/data/2.5/weather?q=Lagos,Nigeria&appid=${Key}`;
-
     btn.addEventListener('click', function(){
         fetch('https://api.openweathermap.org/data/2.5/weather?q=Lagos,Nigeria&appid=9378b429dd8cb9244dbbde76f435a174')
     .then(function (response){
