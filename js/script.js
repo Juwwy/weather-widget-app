@@ -7,6 +7,7 @@ const tempValue = document.querySelector(".temp");
 const desc = document.querySelector(".desc");
 const locOverview = document.querySelector("#location-overview");
 const btn = document.querySelector(".get-local");
+const off = document.querySelector(".firDis")
 
 const weather = {}
 
@@ -18,6 +19,7 @@ const Kelvin = 273;
 const Key = "9378b429dd8cb9244dbbde76f435a174";
 
     btn.addEventListener('click', function(){
+        off.classList.add('displayCheck');
         fetch('https://api.openweathermap.org/data/2.5/weather?q=Lagos,Nigeria&appid=9378b429dd8cb9244dbbde76f435a174')
     .then(function (response){
         let data = response.json();
